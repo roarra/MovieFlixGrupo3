@@ -1,5 +1,10 @@
 package datos;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ */
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -25,7 +30,9 @@ public class Conexion {
         }
     }
     
-    
+    /*
+	 * @return: devuelve un objeto 'connection' para poder trabajar con ella.
+	 */
     public Connection getConnection() {
         return connection;
     }

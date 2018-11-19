@@ -1,5 +1,10 @@
 package datos;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ */
+
 import modelo.Usuario;
 
 public interface IDatosUsuario {

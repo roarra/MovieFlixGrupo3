@@ -1,5 +1,10 @@
 package control;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ */
+
 import java.util.List;
 
 import datos.PeliculasImp;
@@ -17,7 +22,9 @@ public class MovieFlix {
 			IServiciosUsuario servicesUsuario = new ServiciosUsuarioImp();
 			IServiciosPelicula servicesPelicula = new ServiciosPeliculasImp();
 		
-		
+	/*
+	 * @return: no devuelve nada ya que solo imprimira el menu.
+	 */
 	public void arrancar() {
 		
 		boolean seguir = true;
@@ -35,7 +42,9 @@ public class MovieFlix {
 			
 			
 		}
-	
+	/*
+	 * @return: no devuelve nada ya que solo será la seleccion de las opciones.
+	 */
 	public boolean seleccionarOpciones(){
 		
 		boolean continuar = true;

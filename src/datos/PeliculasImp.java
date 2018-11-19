@@ -1,5 +1,10 @@
 package datos;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ */
+
 import java.io.File;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -16,7 +21,9 @@ public class PeliculasImp implements IDatosPelicula{
 	
 	Connection conexion = new Conexion().getConnection();
 	
-
+	/*
+	 * @param: le pasamos un objeto pelicula el cual vamos a añadir en la BBDD
+	 */
 	public void add(Pelicula pelicula) {
 		
 
@@ -40,7 +47,9 @@ public class PeliculasImp implements IDatosPelicula{
 		}
 
 	}
-
+	/*
+	 * @param: le pasamos un nombre el cual vamos a borrar en la BBDD
+	 */
 	public void delete(String nombre) {
 		
 		Statement st = null;
@@ -60,7 +69,9 @@ public class PeliculasImp implements IDatosPelicula{
 			ex.printStackTrace();
 		}
 	}
-
+	/*
+	 * @param: le pasamos un nombre a buscar el cual vamos a actualizar en la BBDD
+	 */
 	public String read(String nombre) {
 		
 		Statement st = null;
@@ -105,7 +116,9 @@ public class PeliculasImp implements IDatosPelicula{
 
    
 	}
-
+	/*
+	 * @param: le pasamos un nombre, una fecha, categoria y nombre a buscar el cual vamos a actualizar en la BBDD
+	 */
 	public void update(String nombre, String añoEstreno, String categoria, String nombrebusqueda) {
 		
 		Statement st = null;
@@ -124,7 +137,9 @@ public class PeliculasImp implements IDatosPelicula{
 		
 
 	}
-	
+	/*
+	 * @param: le pasamos una url para cargar el fichero de peliculas a la BBDD
+	 */
 	public static void cargarPelis(String url){
 		File fichero = new File(url);
 		Scanner s = null;
@@ -157,7 +172,9 @@ public class PeliculasImp implements IDatosPelicula{
 		}
 		
 	}
-	
+	/*
+	 * @param: le pasamos un conjunto de valores que va a insertar en la BBDD, ese conjunto de valores son cada columna de la BBDD en el fichero
+	 */
 	public static void cargarEnBBDD(String[] valores){
 		Conexion conn = null;
 		Statement st = null;
@@ -180,7 +197,9 @@ public class PeliculasImp implements IDatosPelicula{
 		}
 		
 	}
-	
+	/*
+	 * @return: devuelve un conjunto de valores, serán los valores del archivo
+	 */
 	public List<Pelicula> listFilms(){
 		
 		List<Pelicula> lista = new ArrayList<>();
@@ -257,7 +276,9 @@ public class PeliculasImp implements IDatosPelicula{
 		return lista;
 		
 	}
-	
+	/*
+	 * @param: le pasamos un nombre, una fecha, ciudad, fecha de registro y nombre a buscar el cual vamos a actualizar en la BBDD
+	 */
 	public List<Pelicula> listaPorCategoria(String categoria){
 		List<Pelicula> lista = new ArrayList<>();
 		Statement st = null;

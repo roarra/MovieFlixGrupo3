@@ -1,5 +1,11 @@
 package gui;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ * @return: no devuelve nada ya que solo imprime cada una de las opciones
+ */
+
 public class Menu {
 	
 	public static void imprimeMenu(){

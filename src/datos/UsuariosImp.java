@@ -1,5 +1,9 @@
 package datos;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ */
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,6 +19,9 @@ public class UsuariosImp implements IDatosUsuario {
 	
 	Connection conexion = new Conexion().getConnection();
 
+	/*
+	 * @param: le pasamos un objeto de tipo usuario el cual vamos a insertar en la BBDD
+	 */
 	public void add(Usuario usuario){
 
 		
@@ -37,7 +44,9 @@ public class UsuariosImp implements IDatosUsuario {
 		}
 		
 	}
-	
+	/*
+	 * @param: le pasamos un nombre el cual vamos a borrar en la BBDD
+	 */
 	public void delete(String nombre){
 		
 		Statement st = null;
@@ -56,7 +65,9 @@ public class UsuariosImp implements IDatosUsuario {
 		}
 		
 	}
-	
+	/*
+	 * @param: le pasamos un nombre el cual vamos a buscar en la BBDD
+	 */
 	public Usuario read(String nombre){
 		
 		Statement st = null;
@@ -100,6 +111,9 @@ public class UsuariosImp implements IDatosUsuario {
 	
 	}
 	
+	/*
+	 * @param: le pasamos un nombre, una fecha, ciudad, fecha de registro y nombre a buscar el cual vamos a actualizar en la BBDD
+	 */
 	public void update(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String fechaRegistro, String nombreBusqueda){
 		Statement st = null;
 		

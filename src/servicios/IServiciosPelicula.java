@@ -21,7 +21,7 @@ public boolean check(String nombre);
 	
 	public List<Pelicula> listaPorCategoria(String categoria);
 	
-	public Pelicula crearPelicula(String nombre, int fechaEstreno, String categoria);
+	public Pelicula crearPelicula(String nombre, String fechaEstreno, String categoria);
 	
 	public void delete(String nombre);
 	

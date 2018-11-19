@@ -1,5 +1,10 @@
 package control;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 

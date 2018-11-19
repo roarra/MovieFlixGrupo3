@@ -1,5 +1,10 @@
 package modelo;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ */
+
 public class Usuario {
 	
 	private String nombreCompleto;
@@ -93,7 +98,10 @@ public class Usuario {
 		return builder.toString();
 	}
 
-
+	/*
+	 * @param: Le pasamos un nombre, una fecha de nacimiento y una ciudad, un tipo de paquete y una fecha de registro
+	 * @return: nos devuelve un objeto de tipo usuario con los valores pasados por parametro
+	 */
 	public static Usuario crearUsuario(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, String fechaRegistro){
 		
 		Usuario u = new Usuario();

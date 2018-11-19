@@ -1,5 +1,10 @@
 package modelo;
 
+/*
+ * @autor: María Victoria, Charo Arreola, Ana María, Ángel Martin 
+ * @since: 19/11/2018/V1
+ */
+
 public class Pelicula {
 	
 	private String nombre;
@@ -44,7 +49,10 @@ public class Pelicula {
 		return "Pelicula [nombre=" + nombre + ", anioEstreno=" + fechaEstreno + ", categoria=" + categoria + "]";
 	}
 	
-	
+	/*
+	 * @param: Le pasamos un nombre, una fecha de estreno y una categoria
+	 * @return: nos devuelve un objeto de tipo pelicula con los valores pasados por parametro
+	 */
 	public Pelicula crearPelicula(String nombre, String fechaEstreno2, String categoria ){
 		
 		Pelicula p = new Pelicula();
