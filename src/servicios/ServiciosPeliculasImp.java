@@ -69,7 +69,7 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 	
 	@Override
 	public Pelicula crearPelicula(String nombre, int fechaEstreno, String categoria) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	
