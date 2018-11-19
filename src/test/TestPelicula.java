@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class TestPeliculas {
+public class TestPelicula {
 
 	@Test
 	public void CheckRepeatFilm() {
