@@ -27,7 +27,7 @@ public class PeliculasImp implements IDatosPelicula{
 			st = conexion.createStatement();
 
 			st.executeUpdate(
-					"INSERT INTO peliculas(nombre, aÃ±oEstreno, IDCategoria)" + "VALUES ('" + pelicula.getNombre()
+					"INSERT INTO peliculas(nombre, añoEstreno, IDCategoria)" + "VALUES ('" + pelicula.getNombre()
 							+ "', '" + pelicula.getfechaEstreno() + "', (SELECT IDCategoria FROM categoria WHERE nombre = '" + pelicula.getCategoria() + "'));");
 			
 			conexion.close();
