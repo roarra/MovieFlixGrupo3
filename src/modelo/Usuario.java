@@ -1,7 +1,5 @@
 package modelo;
 
-import java.util.Date;
-
 public class Usuario {
 	
 	private String nombreCompleto;
@@ -96,7 +94,7 @@ public class Usuario {
 	}
 
 
-	public static Usuario crearUsuario(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, Date fechaRegistro){
+	public static Usuario crearUsuario(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, String fechaRegistro){
 		
 		Usuario u = new Usuario();
 		

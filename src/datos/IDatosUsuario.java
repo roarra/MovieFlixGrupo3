@@ -10,7 +10,7 @@ public interface IDatosUsuario {
 	
 	public Usuario read(String nombre);
 	
-	public void update(String nombre);
+	public void update(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String fechaRegistro, String nombreBusqueda);
 	
 	
 

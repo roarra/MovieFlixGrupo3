@@ -100,7 +100,20 @@ public class UsuariosImp implements IDatosUsuario {
 	
 	}
 	
-	public void update(String nombre){
+	public void update(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String fechaRegistro, String nombreBusqueda){
+		Statement st = null;
 		
+		try{
+			
+			st = conexion.createStatement();
+			String query = "UPDATE usuarios SET nombre = '" + nombreCompleto + "', fechaNacimiento = '" + fechaNacimiento + "', ciudad = '" + ciudadResidencia + "', fechaAbono = '" + fechaRegistro + "' WHERE nombre = '" + nombreBusqueda + "';";
+			st.executeUpdate(query);
+
+			conexion.close();
+			
+		}catch(SQLException ex){
+			
+			ex.printStackTrace();
+		}
 	}
 }

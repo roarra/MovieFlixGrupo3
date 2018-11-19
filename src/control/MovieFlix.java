@@ -135,6 +135,7 @@ public class MovieFlix {
 			case 11:
 				
 				//METODO ACTUALIZAR USUARIO
+				servicesUsuario.update("Ignacio", "1987", "Barcelona", "extra", "29/10/2018","paco");
 				break;
 				
 			case 12:

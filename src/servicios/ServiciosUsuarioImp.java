@@ -17,7 +17,7 @@ public class ServiciosUsuarioImp implements IServiciosUsuario {
 		return true;
 	}
 
-	public Usuario crearUsuario(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, Date fechaRegistro){
+	public Usuario crearUsuario(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, String fechaRegistro){
 		
 		return new Usuario().crearUsuario(nombreCompleto, fechaNacimiento, ciudadResidencia, paqueteAbono, fechaRegistro);
 		
@@ -44,7 +44,8 @@ public class ServiciosUsuarioImp implements IServiciosUsuario {
 		return new UsuariosImp().read(nombre);
 	}
 	
-	public void update(String nombre){
-		
-	} 
+	public void update(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, String fechaRegistro, String nombreBusqueda){
+		new UsuariosImp().update(nombreCompleto, fechaNacimiento, ciudadResidencia, fechaRegistro, nombreBusqueda);
+	}
+
 } 

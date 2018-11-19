@@ -10,11 +10,11 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 	public boolean check(String nombre){
 		return false;
 		
-		}
+	}
 		
-		public Pelicula crearPelicula(String nombre, String fechaEstreno, String categoria ){
+	public Pelicula crearPelicula(String nombre, String fechaEstreno, String categoria ){
 			
-			return new Pelicula().crearPelicula(nombre, fechaEstreno, categoria);
+		return new Pelicula().crearPelicula(nombre, fechaEstreno, categoria);
 			
 	}
 	
