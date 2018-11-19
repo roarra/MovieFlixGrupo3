@@ -44,7 +44,7 @@ public class MovieFlix {
 			switch(LecturaDatos.leerInt()){
 			
 			case 1: //AñADIR PELICULAS A TRAVES DEL FICHERO
-				
+				ServiciosPeliculasImp.cargarPeliculas();
 			//servicesPelicula.add(); AQUI VA EL DE AñADIR PELICULAS CON EL FICHERO
 				/*String url = "fichero.txt";
 				ServiciosPeliculasImp.cargarPeliculas(url);
