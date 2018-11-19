@@ -73,14 +73,14 @@ public class PeliculasImp implements IDatosPelicula{
 		try {
 
 			st = conexion.createStatement();
-			rs = st.executeQuery("SELECT p.nombre, añoEstreno, c.nombre FROM peliculas p, categoria c WHERE p.IDCategoria = c.IDCategoria AND p.nombre =  '" + nombre + "';");
+			rs = st.executeQuery("SELECT p.nombre, a�oEstreno, c.nombre FROM peliculas p, categoria c WHERE p.IDCategoria = c.IDCategoria AND p.nombre =  '" + nombre + "';");
 			
 			
 
 			while (rs.next()) {
 				
 				pelicula.setNombre(rs.getNString("p.nombre"));
-				pelicula.setfechaEstreno(rs.getString("añoEstreno"));
+				pelicula.setfechaEstreno(rs.getString("a�oEstreno"));
 				pelicula.setCategoria(rs.getString("c.nombre"));
 				//int idcat = rs.getInt("IDCategoria");
 				//rs1 = st.executeQuery("SELECT nombre FROM categoria WHERE IDCategoria =" + idcat );
@@ -106,14 +106,14 @@ public class PeliculasImp implements IDatosPelicula{
    
 	}
 
-	public void update(String nombre, String añoEstreno, String categoria, String nombrebusqueda) {
+	public void update(String nombre, String a�oEstreno, String categoria, String nombrebusqueda) {
 		
 		Statement st = null;
 		
 		try{
 			
 			st = conexion.createStatement();
-			st.executeUpdate("UPDATE peliculas SET nombre = '" + nombre + ", añoEstreno = '" + añoEstreno + "'" + ", IDCategoria = (SELECT IDCategoria FROM categoria WHERE nombre = '" + categoria + "') WHERE nombre = '" + nombrebusqueda + "';");
+			st.executeUpdate("UPDATE peliculas SET nombre = '" + nombre + ", añoEstreno = '" + a�oEstreno + "'" + ", IDCategoria = (SELECT IDCategoria FROM categoria WHERE nombre = '" + categoria + "') WHERE nombre = '" + nombrebusqueda + "';");
 
 			conexion.close();
 			

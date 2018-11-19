@@ -9,7 +9,7 @@ public interface IServiciosPelicula {
 
 public boolean check(String nombre);
 	
-	public void update(String nombre, String aÃ±oEstreno, String categoria, String nombrebusqueda);
+	public void update(String nombre, String añoEstreno, String categoria, String nombrebusqueda);
 	
 	public void add(Pelicula pelicula);
 	

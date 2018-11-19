@@ -18,9 +18,9 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 			
 	}
 	
-	public void update(String nombre, String aÃ±oEstreno, String categoria, String nombrebusqueda){
+	public void update(String nombre, String añoEstreno, String categoria, String nombrebusqueda){
 	
-		new PeliculasImp().update(nombre,aÃ±oEstreno, categoria, nombrebusqueda);
+		new PeliculasImp().update(nombre,añoEstreno, categoria, nombrebusqueda);
 	}
 	
 	public void add(Pelicula pelicula){
