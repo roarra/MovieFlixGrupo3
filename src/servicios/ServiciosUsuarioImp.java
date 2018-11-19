@@ -1,6 +1,7 @@
 package servicios;
 
 import java.util.Date;
+import java.util.List;
 
 import datos.IDatosUsuario;
 import datos.UsuariosImp;
@@ -46,6 +47,11 @@ public class ServiciosUsuarioImp implements IServiciosUsuario {
 	
 	public void update(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, String fechaRegistro, String nombreBusqueda){
 		new UsuariosImp().update(nombreCompleto, fechaNacimiento, ciudadResidencia, fechaRegistro, nombreBusqueda);
+	}
+	
+	public List<Usuario> listUsers(){
+		
+		return new UsuariosImp().listUsers();
 	}
 
 } 
