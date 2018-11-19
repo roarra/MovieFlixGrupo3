@@ -1,5 +1,7 @@
 package servicios;
 
+import java.util.List;
+
 import modelo.Usuario;
 
 public interface IServiciosUsuario {
@@ -15,6 +17,8 @@ public interface IServiciosUsuario {
 	public void delete(String nombre);
 	
 	public Usuario read(String nombre);
+	
+	public List<Usuario> listUsers();
 	
 
 }

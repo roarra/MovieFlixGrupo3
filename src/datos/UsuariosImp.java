@@ -130,4 +130,39 @@ public class UsuariosImp implements IDatosUsuario {
 			ex.printStackTrace();
 		}
 	}
+	
+	public List<Usuario> listUsers(){
+		List<Usuario> lista = new ArrayList<>();
+		Statement st = null;
+		ResultSet rs = null;
+		//ResultSet rs1 = null;
+
+		try {
+
+			st = conexion.createStatement();
+			rs = st.executeQuery("SELECT u.nombre, u.fechaNacimiento, u.ciudad, u.fechaAbono,  a.nombre FROM usuarios u, abono a WHERE a.IDAbono = u.IDAbono;");
+		
+
+			while (rs.next()) {
+
+				Usuario usuario = new Usuario();
+
+				usuario.setNombreCompleto(rs.getString("u.nombre"));
+				usuario.setfechaNacimiento(rs.getString("u.fechaNacimiento"));
+				usuario.setCiudadResidencia(rs.getString("u.ciudad"));
+                usuario.setFechaRegistro(rs.getString("u.fechaAbono"));
+                usuario.setPaqueteAbono(rs.getString("a.nombre"));
+				lista.add(usuario);
+
+			}
+			
+			conexion.close();
+
+		} catch (SQLException ex) {
+
+			ex.printStackTrace();
+
+		}
+		return lista;
+	}
 }
