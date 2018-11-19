@@ -30,7 +30,7 @@ public class MovieFlix {
 		}
 		
 		while(seguir);
-		System.out.println("Terminar Sesiï¿½n");
+		System.out.println("Terminar Sesion");
 			
 			
 		}
@@ -120,7 +120,7 @@ public class MovieFlix {
 			case 9:
 				
 				//BUSCAR PELICULA
-				String nombre = "Saw";
+				String nombre = "Venom";
 				LecturaDatos.escribir(servicesPelicula.read(nombre).toString());
 				break;
 				
@@ -189,7 +189,7 @@ public class MovieFlix {
 	}
 		private boolean salir() throws Exception {
 			
-			String pregunta = LecturaDatos.leerString("Â¿Estas seguro?: S/N: ");
+			String pregunta = LecturaDatos.leerString("¿Estas seguro?: S/N: ");
 			return (pregunta.toUpperCase().charAt(0) != 'S'); 
 			
 			
