@@ -113,7 +113,7 @@ public class PeliculasImp implements IDatosPelicula{
 		try{
 			
 			st = conexion.createStatement();
-			st.executeUpdate("UPDATE peliculas SET nombre = '" + nombre + ", aÃ±oEstreno = '" + añoEstreno + "'" + ", IDCategoria = (SELECT IDCategoria FROM categoria WHERE nombre = '" + categoria + "') WHERE nombre = '" + nombrebusqueda + "';");
+			st.executeUpdate("UPDATE peliculas SET nombre = '" + nombre + ", añoEstreno = '" + añoEstreno + "'" + ", IDCategoria = (SELECT IDCategoria FROM categoria WHERE nombre = '" + categoria + "') WHERE nombre = '" + nombrebusqueda + "';");
 
 			conexion.close();
 			
@@ -166,7 +166,7 @@ public class PeliculasImp implements IDatosPelicula{
 		try {
 
 			st = new Conexion().getConnection().createStatement();
-			String query = "INSERT INTO peliculas(nombre,aÃ±oEstreno,IDCategoria) VALUES('" + valores[0] + "','" + valores[1] + "'," + String.valueOf(valores[2]) + ")";
+			String query = "INSERT INTO peliculas(nombre,añoEstreno,IDCategoria) VALUES('" + valores[0] + "','" + valores[1] + "'," + String.valueOf(valores[2]) + ")";
 			System.out.println(query);
 			res = st.executeUpdate(query);
 			
@@ -191,7 +191,7 @@ public class PeliculasImp implements IDatosPelicula{
 		try {
 
 			st = conexion.createStatement();
-			rs = st.executeQuery("SELECT p.nombre, aÃ±oEstreno, c.nombre FROM peliculas p, categoria c WHERE p.IDCategoria = c.IDCategoria;");
+			rs = st.executeQuery("SELECT p.nombre, añoEstreno, c.nombre FROM peliculas p, categoria c WHERE p.IDCategoria = c.IDCategoria;");
 			//rs1 = null;
 
 			while (rs.next()) {
@@ -199,7 +199,7 @@ public class PeliculasImp implements IDatosPelicula{
 				Pelicula pelicula = new Pelicula();
 
 				pelicula.setNombre(rs.getString("p.nombre"));
-				pelicula.setfechaEstreno(rs.getString("aÃ±oEstreno"));
+				pelicula.setfechaEstreno(rs.getString("añoEstreno"));
 				pelicula.setCategoria(rs.getString("c.nombre"));
 				//int idcat = rs.getInt("IDCategoria");
 				//rs1 = st.executeQuery("SELECT nombre FROM categoria WHERE IDCategoria =" + idcat );
@@ -229,7 +229,7 @@ public class PeliculasImp implements IDatosPelicula{
 		try {
 
 			st = conexion.createStatement();
-			rs = st.executeQuery("SELECT p.nombre, aÃ±oEstreno, c.nombre FROM peliculas p, abono a, categoria c WHERE p.IDCategoria = c.IDCategoria AND p.IDAbono = a.IDAbono AND a.nombre = '" + abono + "';");
+			rs = st.executeQuery("SELECT p.nombre, añoEstreno, c.nombre FROM peliculas p, abono a, categoria c WHERE p.IDCategoria = c.IDCategoria AND p.IDAbono = a.IDAbono AND a.nombre = '" + abono + "';");
 			//rs1 = null;
 
 			while (rs.next()) {
@@ -237,7 +237,7 @@ public class PeliculasImp implements IDatosPelicula{
 				Pelicula pelicula = new Pelicula();
 
 				pelicula.setNombre(rs.getString("p.nombre"));
-				pelicula.setfechaEstreno(rs.getString("aÃ±oEstreno"));
+				pelicula.setfechaEstreno(rs.getString("añoEstreno"));
 				pelicula.setCategoria(rs.getString("c.nombre"));
 				
 				//int idcat = rs.getInt("IDCategoria");
@@ -267,7 +267,7 @@ public class PeliculasImp implements IDatosPelicula{
 		try {
 
 			st = conexion.createStatement();
-			rs = st.executeQuery("SELECT p.nombre, aÃ±oEstreno, c.nombre FROM peliculas p, categoria c WHERE p.IDCategoria = c.IDCategoria AND c.nombre = '" + categoria + "';");
+			rs = st.executeQuery("SELECT p.nombre, añoEstreno, c.nombre FROM peliculas p, categoria c WHERE p.IDCategoria = c.IDCategoria AND c.nombre = '" + categoria + "';");
 			//rs1 = null;
 
 			while (rs.next()) {
@@ -275,7 +275,7 @@ public class PeliculasImp implements IDatosPelicula{
 				Pelicula pelicula = new Pelicula();
 
 				pelicula.setNombre(rs.getString("p.nombre"));
-				pelicula.setfechaEstreno(rs.getString("aÃ±oEstreno"));
+				pelicula.setfechaEstreno(rs.getString("añoEstreno"));
 				pelicula.setCategoria(rs.getString("c.nombre"));
 				//int idcat = rs.getInt("IDCategoria");
 				//rs1 = st.executeQuery("SELECT nombre FROM categoria WHERE IDCategoria =" + idcat );
