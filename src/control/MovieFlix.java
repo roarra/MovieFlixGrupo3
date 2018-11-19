@@ -30,6 +30,7 @@ public class MovieFlix {
 		}
 		
 		while(seguir);
+
 		System.out.println("Terminar Sesion");
 			
 			
@@ -190,10 +191,15 @@ public class MovieFlix {
 		private boolean salir() throws Exception {
 			
 			String pregunta = LecturaDatos.leerString("¿Estas seguro?: S/N: ");
-			return (pregunta.toUpperCase().charAt(0) != 'S'); 
+
+		System.out.println("Terminar Sesion");
+		
+		return (pregunta.toUpperCase().charAt(0) != 'S');
 			
 			
 		}
+	
+	
 }
 	
 	
